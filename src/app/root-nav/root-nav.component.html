@@ -1,0 +1,36 @@
+<div>
+  <mat-toolbar>
+    <div fxShow="true" [fxHide.gt-sm]="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a mat-button class="companyLogo" routerLink="/">
+      <img src="assets/images/logo.jpg">
+    </a>
+    <span class="example-spacer"></span>
+
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button [routerLink]="['about']">About Us</a>
+      <a mat-button [routerLink]="['performances']">Performances</a>
+      <a mat-button [routerLink]="['photos']">Photo Gallery</a>
+      <a mat-button [routerLink]="['contact']">Contact Us</a>
+      <a mat-button [routerLink]="['musical-directors']">Musical Directors</a>
+      <a mat-button [routerLink]="['member-news']">Member News</a>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill class="example-container">
+    <mat-sidenav #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
+        <a mat-button [routerLink]="['about']">About Us</a>
+        <a mat-button [routerLink]="['performances']">Performances</a>
+        <a mat-button [routerLink]="['photos']">Photo Gallery</a>
+        <a mat-button [routerLink]="['contact']">Contact Us</a>
+        <a mat-button [routerLink]="['musical-directors']">Musical Directors</a>
+        <a mat-button [routerLink]="['member-news']">Member News</a>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>
